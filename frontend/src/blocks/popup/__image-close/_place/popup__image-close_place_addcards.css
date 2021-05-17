@@ -1,0 +1,9 @@
+.popup__image-close_place_addcards {
+    width: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .popup__image-close_place_addcards {
+        width: 40.7px;
+    }
+}

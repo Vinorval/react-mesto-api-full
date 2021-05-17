@@ -1,0 +1,8 @@
+.element__rectangle {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 282px;
+}

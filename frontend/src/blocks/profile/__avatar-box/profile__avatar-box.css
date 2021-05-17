@@ -1,0 +1,5 @@
+.profile__avatar-box {
+    display: flex;
+    position: relative;
+    max-height: 120px;
+}

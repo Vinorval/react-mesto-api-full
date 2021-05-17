@@ -1,0 +1,20 @@
+.footer {
+    margin: auto;
+    margin-top: 48px;
+    padding-bottom: 36px;
+    width: 88.125%;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        width: 68.75%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        margin-top: 66px;
+        padding-bottom: 60px;
+        width: 880px;
+    }
+}

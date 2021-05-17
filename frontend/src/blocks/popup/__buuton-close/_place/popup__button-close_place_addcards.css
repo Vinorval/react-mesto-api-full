@@ -1,0 +1,12 @@
+.popup__button-close_place_addcards {
+    margin-bottom: 0;
+    margin-right: -26px;
+    margin-top: -29px;
+}
+
+@media screen and (min-width: 768px) {
+    .popup__button-close_place_addcards {
+        margin-right: -38px;
+        margin-top: -45px;
+    }
+}

@@ -1,0 +1,21 @@
+.popup__button-close {
+    width: 26px;
+    align-self: flex-end;
+    margin-bottom: 13.62px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.popup__button-close:hover {
+    outline: none;
+    opacity: 0.6;
+}
+
+@media screen and (min-width: 768px) {
+    .popup__button-close {
+        width: 40px;
+        margin-bottom: 0;
+        margin-right: -40px;
+    }
+}

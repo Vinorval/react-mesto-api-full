@@ -1,0 +1,19 @@
+.form__input_place_addcards {
+    min-height: 24px;
+    width: 84.035%;
+    font-size: 12px;
+    line-height: 15px;
+    color: #C4C4C4;
+}
+
+.form__input_place_addcards:focus {
+    color: #000;
+}
+
+@media screen and (min-width: 768px) {
+    .form__input_place_addcards {
+        width: 358px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

@@ -1,0 +1,10 @@
+.form__label {
+    width: 238px;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .form__label {
+        width: 358px;
+    }
+}
