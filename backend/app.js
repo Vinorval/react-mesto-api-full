@@ -16,6 +16,8 @@ const app = express();
 
 const corsOptions = {
   origin: [
+    'http://vinorval.mesto.nomoredomains.club',
+    'https://vinorval.mesto.nomoredomains.club',
     'http://localhost:3000',
     'http://localhost:3005',
   ],
