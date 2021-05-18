@@ -1,4 +1,4 @@
-export const BASE_URL = "https://auth.nomoreparties.co/";
+export const BASE_URL = "https://vinorval.mesto.nomoredomains.club/";
 
 class Auth {
   constructor(config) {
@@ -44,7 +44,7 @@ class Auth {
 }
 
 const auth = new Auth({
-  url: "http://localhost:3005",
+  url: "http://vinorval.mesto.nomoredomains.club",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
