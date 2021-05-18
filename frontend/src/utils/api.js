@@ -132,7 +132,7 @@ class Api {
 
 //запись всего класса Api в переменную и её импорт
 const api = new Api({
-  url: "http://vinorval.mesto.nomoredomains.club/",
+  url: "http://api.vinorval.mesto.nomoredomains.club/",
   headers: {
     "content-type": "application/json",
   },
