@@ -20,6 +20,8 @@ const corsOptions = {
     'https://vinorval.mesto.nomoredomains.club',
     'http://localhost:3000',
     'http://localhost:3005',
+    'https://178.154.231.103',
+    'http://178.154.231.103',
   ],
   credentials: true,
 };
