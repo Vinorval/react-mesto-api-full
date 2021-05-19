@@ -44,7 +44,7 @@ class Auth {
 }
 
 const auth = new Auth({
-  url: "http://api.vinorval.mesto.nomoredomains.club",
+  url: "https://api.vinorval.mesto.nomoredomains.club",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
