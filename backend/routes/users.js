@@ -13,7 +13,7 @@ router.get('/users/me', getMyUser);
 router.get('/users/:userId', celebrate({
   body: Joi.object().keys({
     _id: Joi.string().hex(),
-  }),
+  }).unknown(true),
 }), getUser);
 router.patch('/users/me', celebrate({
   body: Joi.object().keys({
