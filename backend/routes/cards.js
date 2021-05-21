@@ -18,7 +18,7 @@ router.post('/cards', celebrate({
 router.delete('/cards/:cardId', celebrate({
   body: Joi.object().keys({
     _id: Joi.string().hex(),
-  }),
+  }).unknown(true),
 }), deleteCard);
 router.put('/cards/:cardId/likes', celebrate({
   body: Joi.object().keys({
