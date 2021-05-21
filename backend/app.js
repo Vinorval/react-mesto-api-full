@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { celebrate, Joi, errors } = require('celebrate');
+const NotFoundError = require('./errors/not-found-err');
 
 const routeUsers = require('./routes/users');
 const routeCards = require('./routes/cards');
@@ -67,7 +68,8 @@ app.use('/', auth, routeCards);
 app.use(errorLogger);
 
 app.use(errors());
-app.use((req, res) => res.status(404).send({ message: 'ресурс не найден' }));
+app.use(() => { throw new NotFoundError('ресурс не найден'); });
+/* eslint-disable no-unused-vars */
 app.use((err, req, res, next) => {
   if (err.name === 'CastError' || err.name === 'ValidationError' || err.statusCode === 400) {
     res
@@ -88,5 +90,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
+  /* eslint-disable no-console */
   console.log(`App listening on port ${PORT}`);
 });
