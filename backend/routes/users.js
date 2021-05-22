@@ -12,7 +12,7 @@ router.get('/users', getUsers);
 router.get('/users/me', getMyUser);
 router.get('/users/:userId', celebrate({
   body: Joi.object().keys({
-    _id: Joi.string().hex(),
+    userId: Joi.string().hex().length(24),
   }).unknown(true),
 }), getUser);
 router.patch('/users/me', celebrate({
@@ -23,7 +23,7 @@ router.patch('/users/me', celebrate({
 }), updateProfil);
 router.patch('/users/me/avatar', celebrate({
   body: Joi.object().keys({
-    avatar: Joi.string().required().regex(/^https?:\/{2}\S+/),
+    avatar: Joi.string().required().regex(/^https?:\/\/(www\.)?((\w+\-\w+)+|\w+)\.([A-z0-9]{2,})(\.\S+|\/\S+)?/),
   }),
 }), updateAvatar);
 
