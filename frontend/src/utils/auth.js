@@ -6,6 +6,14 @@ class Auth {
     this.headers = config.headers;
   }
 
+  _createRequest(url, method, headers, body) {
+    return fetch(url, {
+      method: method,
+      headers: headers,
+      body: body
+    })
+  }
+
   _checkResponse(res) {
     if (res.ok) {
       return res.json();
@@ -15,31 +23,17 @@ class Auth {
 
   //запрос на регистрацию пользователя
   register(password, email) {
-    return fetch(`${this._url}/signup`, {
-      method: "POST",
-      headers: this.headers,
-      body: JSON.stringify({ password, email }),
-    }).then(this._checkResponse);
+    return this._createRequest(`${this._url}/signup`, "POST", this.headers, JSON.stringify({ password, email })).then(this._checkResponse);
   }
 
   //запрос на вход пользователя
   login(password, email) {
-    return fetch(`${this._url}/signin`, {
-      method: "POST",
-      headers: this.headers,
-      body: JSON.stringify({ password, email }),
-    }).then(this._checkResponse);
+    return this._createRequest(`${this._url}/signin`, "POST", this.headers, JSON.stringify({ password, email })).then(this._checkResponse);
   }
 
   //запрос на проверку токена пользователя
   checkToken(token) {
-    return fetch(`${this._url}/users/me`, {
-      method: "GET",
-      headers: {
-        ...this.headers,
-        Authorization: `Bearer ${token}`,
-      },
-    }).then(this._checkResponse);
+    return this._createRequest(`${this._url}/users/me`, "GET", { ...this.headers, Authorization: `Bearer ${token}` }).then(this._checkResponse);
   }
 }
 
